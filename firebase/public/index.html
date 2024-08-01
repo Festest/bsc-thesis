@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Phishing Survey</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/custom.css"> <!-- Custom CSS for additional styles -->
+    <style>
+        .slider-container {
+            background-color: #363547;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .slider-container label {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: white;
+            display: block;
+        }
+        .slider-container input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            background: white;
+            border-radius: 5px;
+            outline: none;
+            position: relative;
+            z-index: 1;
+        }
+        .slider-container input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            background: white;
+            border-radius: 5px;
+        }
+        .slider-container input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            background: #3cf7b7;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+        }
+        .slider-container input[type="range"]::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            background: white;
+            border-radius: 5px;
+        }
+        .slider-container input[type="range"]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            background: #3cf7b7;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .slider-container .slider-numbers {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            font-size: 14px;
+            color: white;
+        }
+        .slider-container .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: white;
+        }
+        .score-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .score-svg {
+            transform: rotate(-90deg);
+        }
+        .score-circle-bg {
+            fill: none;
+            stroke: white;
+            stroke-width: 10;
+        }
+        .score-circle {
+            fill: none;
+            stroke-width: 10;
+            stroke-linecap: round;
+            transition: stroke-dasharray 0.3s, stroke 0.3s;
+        }
+        .score-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            line-height: 1em;
+            text-align: center;
+            color: white;
+        }
+        .subtext {
+            font-size: 1em;
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body style="background: #27262e;">
+    <div id="content">
+        <!-- Landing Page -->
+        <div id="landing-page" class="page" style="width: 90%; max-width: 700px; margin: auto; text-align: center;">
+                <div class="container pt-4 pt-xl-5">
+                    <p class="fw-bold text-success mb-2">Complete a questionnaire</p>
+                    <h1 class="fw-bold">Help us gather insights on Phishing!&nbsp;</h1>
+                </div>
+            <button id="start-button" class="btn btn-primary" type="button" style="margin-top: 32px; margin-bottom: 64px;">START NOW</button>
+            <p>
+                This questionnaire is designed as part of a RUG research project with the goal of understanding the impacts of linguistic cues and AI-generated content on the perceived legitimacy of phishing emails. By answering this questionnaire, you will help us gather insights on this matter.
+                <br><br>
+                <strong>You will be presented with 4 different emails. Please read each of these emails carefully and answer the questions about each one of these emails.</strong>
+                <br><br>
+                <em>Participation in this study is voluntary, and your responses will remain confidential and anonymous, and the collected data will be used exclusively for research purposes.</em>
+            </p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div id="progress-bar-div" style="display: none; margin-bottom: 24px">
+            <p id="progress-bar-text" class="fw-bold text-success mb-2" style="margin-top: 24px; text-align: center"></p>
+            <div class="progress" style="background-color: #ffffff; margin: auto; width: 300px; height: 10px;">
+                <div id="progress-bar" class="progress-bar" role="progressbar" style="background-color: #3cf7b7; width: 10%;"></div>
+            </div>
+        </div>
+
+        <!-- Questionnaire Page 1 -->
+        <div id="questionnaire-page-1" class="page" style="display: none; max-width: 700px; width: 90%; margin: auto">
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 8px; margin-bottom: 8px">
+                <label for="age" style="font-size: 18px; margin-bottom: 8px">What is your Age Group?</label>
+                <select class="form-control" id="age" required>
+                    <option value="" selected hidden style="color: grey">Please select an option...</option>
+                    <option>18-24</option>
+                    <option>25-29</option>
+                    <option>30-34</option>
+                    <option>35-44</option>
+                    <option>45-54</option>
+                    <option>55-64</option>
+                    <option>65+</option>
+                    <option>Prefer Not To Say</option>
+                </select>
+            </div>
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 8px; margin-bottom: 8px">
+                <label for="gender" style="font-size: 18px; margin-bottom: 8px">What is your Gender?</label>
+                <select class="form-control" id="gender" required>
+                    <option value="" selected hidden style="color: grey">Please select an option...</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Other / Prefer Not To Say</option>
+                </select>
+            </div>
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 8px; margin-bottom: 8px">
+                <label for="faculty" style="font-size: 18px; margin-bottom: 8px">What is your faculty?</label>
+                <select class="form-control" id="faculty" required>
+                    <option value="" selected hidden style="color: grey">Please select an option...</option>
+                    <option>Arts</option>
+                    <option>Behavioural and Social Sciences</option>
+                    <option>Economics and Business</option>
+                    <option>Law</option>
+                    <option>Medical Sciences</option>
+                    <option>Philosophy</option>
+                    <option>Religion, Culture and Society</option>
+                    <option>Science and Engineering</option>
+                    <option>Spatial Sciences</option>
+                    <option>Other / Not Applicable / Prefer Not To Say</option>
+                </select>
+            </div>
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 8px; margin-bottom: 8px">
+                <label for="role" style="font-size: 18px; margin-bottom: 8px">What is your role?</label>
+                <select class="form-control" id="role" required>
+                    <option value="" selected hidden style="color: grey">Please select an option...</option>
+                    <option>RUG Student</option>
+                    <option>RUG Employee</option>
+                    <option>Other / Prefer Not To Say</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Questionnaire Page 2 -->
+        <div id="questionnaire-page-2" class="page" style="display: none; max-width: 700px; width: 90%; margin: auto">
+            <div style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <h2 style="color: white;">Email Content</h2>
+                <p style="color: white;">Please read the contents of this email carefully before answering the questions below</p>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img id="email1-image" src="assets/img/qa_873287230912.png" alt="Email Content" class="img-fluid" style="max-width: 100%; text-align: center;">
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="email1-legitimacy-score">Based on the content, tone, and appropriateness of the email above, how legitimate do you consider it to be?</label>
+                <input type="range" id="email1-legitimacy-score" min="0" max="10" step="1">
+                <div class="slider-numbers" style="margin-left: 12px; margin-right: 6px">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="slider-labels">
+                    <span>Illegitimate</span>
+                    <span>Legitimate</span>
+                </div>
+            </div>
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 16px">Based on your previous rating, what aspects made the email appear <strong>legitimate</strong> to you? <em>(Select all that apply)</em></label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-legit-presentation">
+                    <label class="form-check-label" for="email1-legit-presentation">How the information was organized and presented in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-legit-grammar">
+                    <label class="form-check-label" for="email1-legit-grammar">The grammar and spelling in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-legit-url">
+                    <label class="form-check-label" for="email1-legit-url">The URLs (links) in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-legit-tone">
+                    <label class="form-check-label" for="email1-legit-tone">The tone/approach of the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-legit-nothing">
+                    <label class="form-check-label" for="email1-legit-nothing">Nothing</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-legit-other" onchange="toggleOtherInput()">
+                    <label class="form-check-label" for="email1-legit-other">Other</label>
+                    <input type="text" class="form-control mt-2" id="email1-legit-otherInput" style="display: none;">
+                </div>
+            </div>
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+
+                <label style="font-size: 18px; margin-bottom: 16px">Based on your previous rating, what aspects made the email appear <strong>illegitimate</strong> to you? <em>(Select all that apply)</em></label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-illegit-presentation">
+                    <label class="form-check-label" for="email1-illegit-presentation">How the information was organized and presented in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-illegit-grammar">
+                    <label class="form-check-label" for="email1-illegit-grammar">The grammar and spelling in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-illegit-url">
+                    <label class="form-check-label" for="email1-illegit-url">The URLs (links) in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-illegit-tone">
+                    <label class="form-check-label" for="email1-illegit-tone">The tone/approach of the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-illegit-nothing">
+                    <label class="form-check-label" for="email1-illegit-nothing">Nothing</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email1-illegit-other" onchange="toggleOtherInput()">
+                    <label class="form-check-label" for="email1-illegit-other">Other</label>
+                    <input type="text" class="form-control mt-2" id="email1-illegit-otherInput" style="display: none;">
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="email1-ai-score">How do you classify the text in this email?</label>
+                <input type="range" id="email1-ai-score" min="0" max="10" step="1">
+                <div class="slider-numbers" style="margin-left: 12px; margin-right: 6px">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="slider-labels">
+                    <span>Human Written</span>
+                    <span>AI Generated</span>
+                </div>
+            </div>
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 16px">Briefly explain why you gave the classification above. <em>(Optional)</em></label><br>
+                <textarea class="form-control mt-2" id="email1-explanation" style="width: 100%; height: 75px; resize: both;"></textarea>
+            </div>
+        </div>
+
+        <!-- Questionnaire Page 3 -->
+        <div id="questionnaire-page-3" class="page" style="display: none; max-width: 700px; width: 90%; margin: auto">
+            <div style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <h2 style="color: white;">Email Content</h2>
+                <p style="color: white;">Please read the contents of this email carefully before answering the questions below</p>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img id="email2-image" src="assets/img/qa_873287230912.png" alt="Email Content" class="img-fluid" style="max-width: 100%; text-align: center;">
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="email2-legitimacy-score">Based on the content, tone, and appropriateness of the email above, how legitimate do you consider it to be?</label>
+                <input type="range" id="email2-legitimacy-score" min="0" max="10" step="1">
+                <div class="slider-numbers" style="margin-left: 12px; margin-right: 6px">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="slider-labels">
+                    <span>Illegitimate</span>
+                    <span>Legitimate</span>
+                </div>
+            </div>
+
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 16px">Based on your previous rating, what aspects made the email appear <strong>legitimate</strong> to you? <em>(Select all that apply)</em></label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-legit-presentation">
+                    <label class="form-check-label" for="email2-legit-presentation">How the information was organized and presented in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-legit-grammar">
+                    <label class="form-check-label" for="email2-legit-grammar">The grammar and spelling in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-legit-url">
+                    <label class="form-check-label" for="email2-legit-url">The URLs (links) in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-legit-tone">
+                    <label class="form-check-label" for="email2-legit-tone">The tone/approach of the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-legit-nothing">
+                    <label class="form-check-label" for="email2-legit-nothing">Nothing</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-legit-other" onchange="toggleOtherInput()">
+                    <label class="form-check-label" for="email2-legit-other">Other</label>
+                    <input type="text" class="form-control mt-2" id="email2-legit-otherInput" style="display: none;">
+                </div>
+            </div>
+
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 16px">Based on your previous rating, what aspects made the email appear <strong>illegitimate</strong> to you? <em>(Select all that apply)</em></label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-illegit-presentation">
+                    <label class="form-check-label" for="email2-illegit-presentation">How the information was organized and presented in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-illegit-grammar">
+                    <label class="form-check-label" for="email2-illegit-grammar">The grammar and spelling in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-illegit-url">
+                    <label class="form-check-label" for="email2-illegit-url">The URLs (links) in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-illegit-tone">
+                    <label class="form-check-label" for="email2-illegit-tone">The tone/approach of the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-illegit-nothing">
+                    <label class="form-check-label" for="email2-illegit-nothing">Nothing</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email2-illegit-other" onchange="toggleOtherInput()">
+                    <label class="form-check-label" for="email2-illegit-other">Other</label>
+                    <input type="text" class="form-control mt-2" id="email2-illegit-otherInput" style="display: none;">
+                </div>
+            </div>
+            <div class="slider-container">
+                <label for="email2-ai-score">How do you classify the text in this email?</label>
+                <input type="range" id="email2-ai-score" min="0" max="10" step="1">
+                <div class="slider-numbers" style="margin-left: 12px; margin-right: 6px">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="slider-labels">
+                    <span>Human Written</span>
+                    <span>AI Generated</span>
+                </div>
+            </div>
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 16px">Briefly explain why you gave the classification above. <em>(Optional)</em></label><br>
+                <textarea class="form-control mt-2" id="email2-explanation" style="width: 100%; height: 100px; resize: both;"></textarea>
+            </div>
+        </div>
+
+        <!-- Questionnaire Page 4 -->
+        <div id="questionnaire-page-4" class="page" style="display: none; max-width: 700px; width: 90%; margin: auto">
+            <div style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <h2 style="color: white;">Email Content</h2>
+                <p style="color: white;">Please read the contents of this email carefully before answering the questions below</p>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img id="email3-image" src="assets/img/qa_873287230912.png" alt="Email Content" class="img-fluid" style="max-width: 100%; text-align: center;">
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <label for="email3-legitimacy-score">Based on the content, tone, and appropriateness of the email above, how legitimate do you consider it to be?</label>
+                <input type="range" id="email3-legitimacy-score" min="0" max="10" step="1">
+                <div class="slider-numbers" style="margin-left: 12px; margin-right: 6px">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="slider-labels">
+                    <span>Illegitimate</span>
+                    <span>Legitimate</span>
+                </div>
+            </div>
+
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 16px">Based on your previous rating, what aspects made the email appear <strong>legitimate</strong> to you? <em>(Select all that apply)</em></label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-legit-presentation">
+                    <label class="form-check-label" for="email3-legit-presentation">How the information was organized and presented in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-legit-grammar">
+                    <label class="form-check-label" for="email3-legit-grammar">The grammar and spelling in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-legit-url">
+                    <label class="form-check-label" for="email3-legit-url">The URLs (links) in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-legit-tone">
+                    <label class="form-check-label" for="email3-legit-tone">The tone/approach of the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-legit-nothing">
+                    <label class="form-check-label" for="email3-legit-nothing">Nothing</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-legit-other" onchange="toggleOtherInput()">
+                    <label class="form-check-label" for="email3-legit-other">Other</label>
+                    <input type="text" class="form-control mt-2" id="email3-legit-otherInput" style="display: none;">
+                </div>
+            </div>
+
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 16px">Based on your previous rating, what aspects made the email appear <strong>illegitimate</strong> to you? <em>(Select all that apply)</em></label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-illegit-presentation">
+                    <label class="form-check-label" for="email3-illegit-presentation">How the information was organized and presented in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-illegit-grammar">
+                    <label class="form-check-label" for="email3-illegit-grammar">The grammar and spelling in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-illegit-url">
+                    <label class="form-check-label" for="email3-illegit-url">The URLs (links) in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-illegit-tone">
+                    <label class="form-check-label" for="email3-illegit-tone">The tone/approach of the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-illegit-nothing">
+                    <label class="form-check-label" for="email3-illegit-nothing">Nothing</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email3-illegit-other" onchange="toggleOtherInput()">
+                    <label class="form-check-label" for="email3-illegit-other">Other</label>
+                    <input type="text" class="form-control mt-2" id="email3-illegit-otherInput" style="display: none;">
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <label for="email3-ai-score">How do you classify the text in this email?</label>
+                <input type="range" id="email3-ai-score" min="0" max="10" step="1">
+                <div class="slider-numbers" style="margin-left: 12px; margin-right: 6px">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="slider-labels">
+                    <span>Human Written</span>
+                    <span>AI Generated</span>
+                </div>
+            </div>
+
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 16px">Briefly explain why you gave the classification above. <em>(Optional)</em></label><br>
+                <textarea class="form-control mt-2" id="email3-explanation" style="width: 100%; height: 75px; resize: both;"></textarea>
+            </div>
+        </div>
+
+        <!-- Questionnaire Page 5 -->
+        <div id="questionnaire-page-5" class="page" style="display: none; max-width: 700px; width: 90%; margin: auto">
+            <div style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <h2 style="color: white;">Email Content</h2>
+                <p style="color: white;">Please read the contents of this email carefully before answering the questions below</p>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img id="email4-image" src="assets/img/qa_873287230912.png" alt="Email Content" class="img-fluid" style="max-width: 100%; text-align: center;">
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <label for="email4-legitimacy-score">Based on the content, tone, and appropriateness of the email above, how legitimate do you consider it to be?</label>
+                <input type="range" id="email4-legitimacy-score" min="0" max="10" step="1">
+                <div class="slider-numbers" style="margin-left: 12px; margin-right: 6px">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="slider-labels">
+                    <span>Illegitimate</span>
+                    <span>Legitimate</span>
+                </div>
+            </div>
+
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 16px">Based on your previous rating, what aspects made the email appear <strong>legitimate</strong> to you? <em>(Select all that apply)</em></label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-legit-presentation">
+                    <label class="form-check-label" for="email4-legit-presentation">How the information was organized and presented in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-legit-grammar">
+                    <label class="form-check-label" for="email4-legit-grammar">The grammar and spelling in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-legit-url">
+                    <label class="form-check-label" for="email4-legit-url">The URLs (links) in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-legit-tone">
+                    <label class="form-check-label" for="email4-legit-tone">The tone/approach of the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-legit-nothing">
+                    <label class="form-check-label" for="email4-legit-nothing">Nothing</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-legit-other" onchange="toggleOtherInput()">
+                    <label class="form-check-label" for="email4-legit-other">Other</label>
+                    <input type="text" class="form-control mt-2" id="email4-legit-otherInput" style="display: none;">
+                </div>
+            </div>
+
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+
+                <label style="font-size: 18px; margin-bottom: 16px">Based on your previous rating, what aspects made the email appear <strong>illegitimate</strong> to you? <em>(Select all that apply)</em></label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-illegit-presentation">
+                    <label class="form-check-label" for="email4-illegit-presentation">How the information was organized and presented in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-illegit-grammar">
+                    <label class="form-check-label" for="email4-illegit-grammar">The grammar and spelling in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-illegit-url">
+                    <label class="form-check-label" for="email4-illegit-url">The URLs (links) in the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-illegit-tone">
+                    <label class="form-check-label" for="email4-illegit-tone">The tone/approach of the email</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-illegit-nothing">
+                    <label class="form-check-label" for="email4-illegit-nothing">Nothing</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="email4-illegit-other" onchange="toggleOtherInput()">
+                    <label class="form-check-label" for="email4-illegit-other">Other</label>
+                    <input type="text" class="form-control mt-2" id="email4-illegit-otherInput" style="display: none;">
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <label for="email4-ai-score">How do you classify the text in this email?</label>
+                <input type="range" id="email4-ai-score" min="0" max="10" step="1">
+                <div class="slider-numbers" style="margin-left: 12px; margin-right: 6px">
+                    <span>0</span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="slider-labels">
+                    <span>Human Written</span>
+                    <span>AI Generated</span>
+                </div>
+            </div>
+
+            <div class="form-group" style="background-color: #363547; border-radius: 15px; padding: 20px; margin-bottom: 20px">
+                <label style="font-size: 18px; margin-bottom: 16px">Briefly explain why you gave the classification above. <em>(Optional)</em></label><br>
+                <textarea class="form-control mt-2" id="email4-explanation" style="width: 100%; height: 75px; resize: both;"></textarea>
+            </div>
+        </div>
+
+        <!-- Score Page -->
+        <div id="score-page" style="max-width: 700px; width: 90%; margin: auto; display: none">
+            <h2 class="fw-bold" style="margin-top: 24px; text-align: center; color: #3cf7b7;">Thank You For Answering!</h2>
+            <h1 class="fw-bold" style="margin-bottom: 24px; text-align: center">Your Scores Are</h1>
+            <div style="background-color: #363547; border-radius: 15px; padding: 20px; flex-direction: column; align-items: center; display: flex">
+                <div class="score-container" style="width: 150px; height: 150px; margin-bottom: 20px">
+                    <div>
+                        <svg class="score-svg" width="150" height="150" viewBox="0 0 100 100">
+                            <circle class="score-circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="score-circle" cx="50" cy="50" r="45" stroke-dasharray="0 283"></circle>
+                        </svg>
+                        <div class="score-text"></div>
+                    </div>
+                    <div class="subtext">Average</div>
+                </div>
+                <div class="row">
+                    <div class="score-container" style="width: 200px; height: 100px; margin-bottom: 30px">
+                        <div>
+                            <svg class="score-svg" width="100" height="100" viewBox="0 0 100 100">
+                                <circle class="score-circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="score-circle" cx="50" cy="50" r="45" stroke-dasharray="0 283"></circle>
+                            </svg>
+                            <div class="score-text"></div>
+                        </div>
+                        <div class="subtext">AI Score</div>
+                    </div>
+                    <div class="score-container" style="width: 200px; height: 100px; margin-bottom: 30px">
+                        <div>
+                            <svg class="score-svg" width="100" height="100" viewBox="0 0 100 100">
+                                <circle class="score-circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="score-circle" cx="50" cy="50" r="45" stroke-dasharray="0 283"></circle>
+                            </svg>
+                            <div class="score-text"></div>
+                        </div>
+                        <div class="subtext">Legitimacy Score</div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px; text-align: center">If you had a score below 7, and especially in the Legitimacy Score, we highly encourage you to check <a href="https://www.rug.nl/society-business/centre-for-information-technology/security/" style="color: #3cf7b7;"><u>this page</u></a> from RUG about phishing, and to read further educational materials on the subject.</div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px">
+            <button id="prev-page-button" class="btn btn-secondary" type="button" style="display: none;">Previous</button>
+            <button id="next-page-button" class="btn btn-primary" type="button" style="display: none; margin-left: 16px;">Next</button>
+            <button id="submit-button" class="btn btn-success" type="button" style="display: none; margin-left: 16px;">Submit</button>
+        </div>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bold-and-dark.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
