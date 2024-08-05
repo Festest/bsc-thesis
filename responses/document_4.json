@@ -1,0 +1,97 @@
+{
+    "time": 1722533758575.0,
+    "type": 1,
+    "token": "ee4cf3cf0303877c",
+    "answers": {
+        "personalInfo": {
+            "gender": "Male",
+            "age": "18-24",
+            "role": "RUG Student",
+            "faculty": "Science and Engineering"
+        },
+        "email1": {
+            "legitimacyScore": "3",
+            "aiScore": "6",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "It looks legitimate for the most part, but the picture used and the sign off doesn't look quite as professional as you would come to expect from a multi-billion dollar company"
+        },
+        "email2": {
+            "legitimacyScore": "8",
+            "aiScore": "3",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "The \"log in to the PayPal app\" and \"PayPal is committed to preventing fraudulent emails\" parts make me believe that it's a genuine email. A phishing email wouldn't tell you to open the app instead of clicking the link. The only part that is throwing me off is the last sentence. "
+        },
+        "email3": {
+            "legitimacyScore": "3",
+            "aiScore": "1",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "The email seems quite bare bones, and the text is not quite professional enough for a company of this size. "
+        },
+        "email4": {
+            "legitimacyScore": "0",
+            "aiScore": "0",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "\"Customer\" rather than the name of the user and there are all kinds of spelling mistakes."
+        }
+    }
+}

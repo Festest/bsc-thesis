@@ -1,0 +1,97 @@
+{
+    "time": 1722467037356.0,
+    "type": 0,
+    "token": "fe0511eff44b43c8",
+    "answers": {
+        "personalInfo": {
+            "gender": "Male",
+            "age": "25-29",
+            "role": "RUG Employee",
+            "faculty": "Other / Not Applicable / Prefer Not To Say"
+        },
+        "email1": {
+            "legitimacyScore": "2",
+            "aiScore": "7",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": ""
+        },
+        "email2": {
+            "legitimacyScore": "9",
+            "aiScore": "3",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "I believe this to be a non-fraudulent email, as it does not seem to contain any sketchy hyperlinks, but instead refers to the website where you can login. However, smart fraud campaigns could recreate this, of course. "
+        },
+        "email3": {
+            "legitimacyScore": "7",
+            "aiScore": "5",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": ""
+        },
+        "email4": {
+            "legitimacyScore": "7",
+            "aiScore": "5",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": ""
+        }
+    }
+}

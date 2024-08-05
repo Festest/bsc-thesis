@@ -1,0 +1,97 @@
+{
+    "time": 1722774203370.0,
+    "type": 1,
+    "token": "ada9a415d798e055",
+    "answers": {
+        "personalInfo": {
+            "gender": "Male",
+            "age": "25-29",
+            "role": "RUG Student",
+            "faculty": "Science and Engineering"
+        },
+        "email1": {
+            "legitimacyScore": "7.78",
+            "aiScore": "2.22",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": "'disruption to your account' is expected business talk"
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": "'a sense of emergency' based on the 'in 24 hours' feels to be an intended manipulation; 'thank you' at the end feels a bit informal, but I think it depends on 'more external information' such asthe attitude of the company in general"
+            },
+            "explanation": "AI might offer small reformulations, not just the complete text."
+        },
+        "email2": {
+            "legitimacyScore": "8.89",
+            "aiScore": "1.11",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": "The acepticism of the context. But I'd normally look at the source email and the URL in the button's <href>"
+            },
+            "explanation": "Well, it is a filled-in template. The footer details have to be exact, so I think it's mostly human-generated."
+        },
+        "email3": {
+            "legitimacyScore": "2.22",
+            "aiScore": "1.11",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": "'sounds like a good idea ?' sounds like a foreigner trying to sound friendly, instead of professional and impersonal."
+            },
+            "explanation": "The expressive clumsiness is likely human"
+        },
+        "email4": {
+            "legitimacyScore": "0",
+            "aiScore": "0",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": "Very sloppy writting. Is this authentic, or did you make it up ?"
+            },
+            "explanation": "Such circumvoluted expressivity is likely human. A reasonable language model ought to use slightly better language. Well, AI mighthave been used to check and correct typos though."
+        }
+    }
+}

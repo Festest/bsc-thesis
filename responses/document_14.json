@@ -1,0 +1,97 @@
+{
+    "time": 1722612147722.0,
+    "type": 1,
+    "token": "df8b837b1b0a8c15",
+    "answers": {
+        "personalInfo": {
+            "gender": "Male",
+            "age": "18-24",
+            "role": "Other / Prefer Not To Say",
+            "faculty": "Science and Engineering"
+        },
+        "email1": {
+            "legitimacyScore": "8",
+            "aiScore": "2",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": ""
+        },
+        "email2": {
+            "legitimacyScore": "10",
+            "aiScore": "0",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": ""
+        },
+        "email3": {
+            "legitimacyScore": "3",
+            "aiScore": "7",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": ""
+        },
+        "email4": {
+            "legitimacyScore": "0",
+            "aiScore": "10",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": ""
+        }
+    }
+}

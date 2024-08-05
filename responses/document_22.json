@@ -1,0 +1,97 @@
+{
+    "time": 1722773907273.0,
+    "type": 1,
+    "token": "c744463477e84c4e",
+    "answers": {
+        "personalInfo": {
+            "gender": "Female",
+            "age": "18-24",
+            "role": "RUG Student",
+            "faculty": "Arts"
+        },
+        "email1": {
+            "legitimacyScore": "1.11",
+            "aiScore": "7.78",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": "The content (I'd think issues with payment would usually be sorted out during the checkout process)"
+            },
+            "explanation": "The information seems a bit vague to me and the way it's all phrased just doesn't strike me as natural"
+        },
+        "email2": {
+            "legitimacyScore": "8.89",
+            "aiScore": "2.22",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": "The fact that it didn't force me to use the 'message center' button link but also how to navigate there, meaning I know I'll be using the actual PayPal website. Also the text in the footer. And if the first name is supposed to be correct, then that too."
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": "I figure this could be written by a well-prompted AI that has been fed plenty of information on PayPal. But the preciseness and clarity (also the clear intent) of the writing make me think it's written by a human."
+        },
+        "email3": {
+            "legitimacyScore": "3.33",
+            "aiScore": "6.67",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "I feel like some of the phrasing doesn't quite make sense for an Ebay email"
+        },
+        "email4": {
+            "legitimacyScore": "0",
+            "aiScore": "7.78",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": "The 'dear Customer' (they should know my name) and also 'unkown device'"
+            },
+            "explanation": "I would hope a human wouldn't make mistakes like missing capital letters in such an email. Also the phrasing is weird, 'we emailed you a little while ago' does not sound professional. The text is vague"
+        }
+    }
+}

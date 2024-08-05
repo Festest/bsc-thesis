@@ -1,0 +1,97 @@
+{
+    "time": 1722526661442.0,
+    "type": 0,
+    "token": "660135fe9db0c548",
+    "answers": {
+        "personalInfo": {
+            "gender": "Male",
+            "age": "18-24",
+            "role": "RUG Student",
+            "faculty": "Science and Engineering"
+        },
+        "email1": {
+            "legitimacyScore": "0",
+            "aiScore": "0",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "The errors in the text feel like they are human made by a non native speaker"
+        },
+        "email2": {
+            "legitimacyScore": "10",
+            "aiScore": "0",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": "This feels like an email that would have existed for quite some time already, so no AI existed at the time this would have been written"
+        },
+        "email3": {
+            "legitimacyScore": "10",
+            "aiScore": "0",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": "I cannot tell whether this was written by a human or AI generated, but since the email probably exists for some time already it is probably human written"
+        },
+        "email4": {
+            "legitimacyScore": "0",
+            "aiScore": "5",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "I do not know whether this is human written or AI generated"
+        }
+    }
+}

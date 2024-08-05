@@ -1,0 +1,97 @@
+{
+    "time": 1722773089912.0,
+    "type": 0,
+    "token": "e9396b2be8d87bde",
+    "answers": {
+        "personalInfo": {
+            "gender": "Female",
+            "age": "55-64",
+            "role": "RUG Student",
+            "faculty": "Arts"
+        },
+        "email1": {
+            "legitimacyScore": "0.00",
+            "aiScore": "7.78",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": ""
+        },
+        "email2": {
+            "legitimacyScore": "5.56",
+            "aiScore": "2.22",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": ""
+        },
+        "email3": {
+            "legitimacyScore": "6.67",
+            "aiScore": "3.33",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": ""
+        },
+        "email4": {
+            "legitimacyScore": "1.11",
+            "aiScore": "4.44",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": "I expect that credit card company will inform me about this and not pay pal"
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": ""
+        }
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "time": 1722545802081.0,
+    "type": 0,
+    "token": "862959d0618566b6",
+    "answers": {
+        "personalInfo": {
+            "gender": "Female",
+            "age": "18-24",
+            "role": "Other / Prefer Not To Say",
+            "faculty": "Science and Engineering"
+        },
+        "email1": {
+            "legitimacyScore": "1",
+            "aiScore": "5",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "Can\u2019t really be sure because it does make sense logically what the email says but it doesn\u2019t sound very human to me"
+        },
+        "email2": {
+            "legitimacyScore": "10",
+            "aiScore": "5",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": ""
+        },
+        "email3": {
+            "legitimacyScore": "7",
+            "aiScore": "7",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": ""
+        },
+        "email4": {
+            "legitimacyScore": "10",
+            "aiScore": "7",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": ""
+        }
+    }
+}

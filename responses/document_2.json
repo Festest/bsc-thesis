@@ -1,0 +1,97 @@
+{
+    "time": 1722509481833.0,
+    "type": 1,
+    "token": "d85fcad5949bc27c",
+    "answers": {
+        "personalInfo": {
+            "gender": "Male",
+            "age": "25-29",
+            "role": "RUG Student",
+            "faculty": "Science and Engineering"
+        },
+        "email1": {
+            "legitimacyScore": "5",
+            "aiScore": "3",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "Looks like it could be legit, I would click the link and see where it takes me - then decide if phishing or not"
+        },
+        "email2": {
+            "legitimacyScore": "9",
+            "aiScore": "3",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": "Looks legit. I'd believe it, it just depends where the link takes me "
+        },
+        "email3": {
+            "legitimacyScore": "8",
+            "aiScore": "3",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": "Looks legit, I'm just personally always a bit sceptical of emails asking me to update my information"
+        },
+        "email4": {
+            "legitimacyScore": "7",
+            "aiScore": "6",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "Email looks quite legit, but some of the wording and spacing is a bit odd. \n\nI'd probably contact PayPal directly to try see if there is a real problem "
+        }
+    }
+}

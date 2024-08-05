@@ -1,0 +1,97 @@
+{
+    "time": 1722617885434.0,
+    "type": 0,
+    "token": "497b9949dea11b23",
+    "answers": {
+        "personalInfo": {
+            "gender": "Male",
+            "age": "18-24",
+            "role": "Other / Prefer Not To Say",
+            "faculty": "Other / Not Applicable / Prefer Not To Say"
+        },
+        "email1": {
+            "legitimacyScore": "3",
+            "aiScore": "3",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "The text itself is fine, however the fabricated urgency makes it look more like a scam. (I.e. \"act now or you wont be able to use it!\")"
+        },
+        "email2": {
+            "legitimacyScore": "6",
+            "aiScore": "0",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "It seems legitimate as it isnt trying to frighten you into action (though the mention of the mailbox is odd and does give me pause). The text itself however lacks AI's usual issues with brevity"
+        },
+        "email3": {
+            "legitimacyScore": "4",
+            "aiScore": "9",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "Few repetitions of the word information that looks odd.\n\nButton also just looks a tad unprofessional "
+        },
+        "email4": {
+            "legitimacyScore": "2",
+            "aiScore": "3",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "The email says alot of things without saying much. It sounds urgent but generally emails should clarify more than \"detected an issue\" and therefore I would ignore this email most likely."
+        }
+    }
+}

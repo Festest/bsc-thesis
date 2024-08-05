@@ -1,0 +1,97 @@
+{
+    "time": 1722611589033.0,
+    "type": 1,
+    "token": "e7e6f1227a8d8270",
+    "answers": {
+        "personalInfo": {
+            "gender": "Male",
+            "age": "30-34",
+            "role": "RUG Student",
+            "faculty": "Science and Engineering"
+        },
+        "email1": {
+            "legitimacyScore": "0",
+            "aiScore": "5",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "I don\u2019t have a creditcard so any email like that is bs"
+        },
+        "email2": {
+            "legitimacyScore": "5",
+            "aiScore": "4",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "It is an email that could be send, just the button could be malicious and should not have been included as people trust it too easily. "
+        },
+        "email3": {
+            "legitimacyScore": "4",
+            "aiScore": "4",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "Same as paypal but now they also ask for info with a button"
+        },
+        "email4": {
+            "legitimacyScore": "0",
+            "aiScore": "3",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "Trying to get you to do something with a button"
+        }
+    }
+}

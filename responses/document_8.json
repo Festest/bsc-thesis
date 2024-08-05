@@ -1,0 +1,97 @@
+{
+    "time": 1722551828407.0,
+    "type": 0,
+    "token": "4096b10e8fedac47",
+    "answers": {
+        "personalInfo": {
+            "gender": "Male",
+            "age": "18-24",
+            "role": "Other / Prefer Not To Say",
+            "faculty": "Science and Engineering"
+        },
+        "email1": {
+            "legitimacyScore": "1",
+            "aiScore": "8",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": "The match with the colors. The information. The signature. The away that the mail approach to the user"
+        },
+        "email2": {
+            "legitimacyScore": "8",
+            "aiScore": "10",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": "In my opinion this mail is legit because you have more themed and more explicit information, and don't ask for any personal information, just notifying the client"
+        },
+        "email3": {
+            "legitimacyScore": "3",
+            "aiScore": "3",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "The URL and the topic of  the email is very suspicious."
+        },
+        "email4": {
+            "legitimacyScore": "0",
+            "aiScore": "3",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "The logo is very weird, and the content of the email is very awkward too."
+        }
+    }
+}

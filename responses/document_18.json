@@ -1,0 +1,97 @@
+{
+    "time": 1722772913258.0,
+    "type": 0,
+    "token": "f7db11d580820960",
+    "answers": {
+        "personalInfo": {
+            "gender": "Female",
+            "age": "18-24",
+            "role": "RUG Student",
+            "faculty": "Science and Engineering"
+        },
+        "email1": {
+            "legitimacyScore": "0.00",
+            "aiScore": "3.33",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "Grammar is mostly correct besides the 'account are' mismatch. Language used doesnt sound like AI language "
+        },
+        "email2": {
+            "legitimacyScore": "7.78",
+            "aiScore": "0.00",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": false,
+                "tone": false,
+                "nothing": true,
+                "other": ""
+            },
+            "explanation": "The wording doesn't make it look like it has been AI generated"
+        },
+        "email3": {
+            "legitimacyScore": "6.67",
+            "aiScore": "8.89",
+            "legitAspects": {
+                "presentation": true,
+                "grammar": true,
+                "url": false,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "Wording used makes it sound like AI was used"
+        },
+        "email4": {
+            "legitimacyScore": "3.33",
+            "aiScore": "8.89",
+            "legitAspects": {
+                "presentation": false,
+                "grammar": true,
+                "url": false,
+                "tone": false,
+                "nothing": false,
+                "other": ""
+            },
+            "illegitAspects": {
+                "presentation": false,
+                "grammar": false,
+                "url": true,
+                "tone": true,
+                "nothing": false,
+                "other": ""
+            },
+            "explanation": "Wording makes it sound AI generated"
+        }
+    }
+}
